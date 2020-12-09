@@ -45,4 +45,8 @@ class House
     house_details["address"] = address
     return house_details
   end
+
+  def price_per_square_foot
+    area / 9.024842065263858
+  end
 end
