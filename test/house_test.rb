@@ -77,5 +77,6 @@ class HouseTest < Minitest::Test
     house.add_room(room_4)
 
     assert_equal 210.53, house.price_per_square_foot
+    assert_equal [room_1, room_2, room_3, room_4], house.rooms_sorted_by_area
   end
 end

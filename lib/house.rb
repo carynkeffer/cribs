@@ -49,4 +49,10 @@ class House
   def price_per_square_foot
     area / 9.024842065263858
   end
+
+  def rooms_sorted_by_area
+    rooms.sort_by do |room|
+      room.area
+    end
+  end
 end
