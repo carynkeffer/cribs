@@ -37,4 +37,11 @@ class House
   def area
     house_area.sum
   end
+
+  def details
+    details = Hash.new
+    details["price"] = price
+    details["address"] = address
+    return details
+  end
 end

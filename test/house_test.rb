@@ -58,8 +58,9 @@ class HouseTest < Minitest::Test
     house.add_room(room_3)
     house.add_room(room_4)
 
-    assert_equal [130, 150, 150, 410], house.house_area
+    assert_equal [130, 165, 375, 1230], house.house_area
     assert_equal 1900, house.area
-    assert_equal {"price" => 400000, "address" => "123 sugar lane"}, house.details
+    expected = {"price" => 400000, "address" => "123 sugar lane"}
+    assert_equal expected, house.details
   end
 end
