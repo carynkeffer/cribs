@@ -1,11 +1,13 @@
 class House
   attr_reader :price,
               :address,
-              :rooms
+              :rooms,
+              :house_details
   def initialize(price, address)
     @price = price
     @address = address
     @rooms = []
+    @house_details = Hash.new
   end
 
   def price
@@ -39,9 +41,8 @@ class House
   end
 
   def details
-    details = Hash.new
-    details["price"] = price
-    details["address"] = address
-    return details
+    house_details["price"] = price
+    house_details["address"] = address
+    return house_details
   end
 end
